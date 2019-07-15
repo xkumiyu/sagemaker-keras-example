@@ -29,14 +29,23 @@ python prepare_mnist.py
 
 ## Training
 
-Create SageMaker training job.
+Create a SageMaker training job.
+Then, the job name is `mnist-yyyy-mm-dd-HH-MM`.
 
 ``` sh
 python create_training_job.py
 ```
 
+Source code used for training is stored in S3.
+And, after training is complete, the output and model are stored in S3.
+
+- source code: s3://bucket-name/training/job-name/source/sourcedir.tar.gz
+- output: s3://bucket-name/training/job-name/output/output.tar.gz
+- model: s3://bucket-name/training/job-name/output/model.tar.gz
+
 ## TODO
 
 - [ ] Deployment
+- [ ] Deployment using BYO model
 - [ ] Inference
 - [ ] Custom Image

@@ -20,6 +20,7 @@ def main():
                         default=f's3://{s3_bucket_name}/training')
     parser.add_argument('--train_instance_type', default='ml.m5.large')
     parser.add_argument('--wait', action='store_true')
+    # parser.add_argument('--deploy', action='store_true')
     args = parser.parse_args()
 
     input_data = {'dataset': args.input_data}
