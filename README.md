@@ -43,9 +43,20 @@ And, after training is complete, the output and model are stored in S3.
 - output: s3://bucket-name/training/job-name/output/output.tar.gz
 - model: s3://bucket-name/training/job-name/output/model.tar.gz
 
+## Deployment
+
+Deploy model to TensorFlow Serving in SageMaker.
+
+``` sh
+python deploy_model.py <model_data>
+```
+
+`model_data` is s3 path to model.tar.gz.
+For example, s3://bucket-name/training/job-name/output/model.tar.gz.
+
+Models to be deployed are available not only for models trained in sagemaker, but also for BYO models.
+
 ## TODO
 
-- [ ] Deployment
-- [ ] Deployment using BYO model
 - [ ] Inference
 - [ ] Custom Image
