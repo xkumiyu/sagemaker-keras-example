@@ -10,7 +10,7 @@ yapf = "*"
 [packages]
 sagemaker = "*"
 pandas = "*"
-tensorflow = "==1.12.0"
+tensorflow = "==1.12.3"
 matplotlib = "*"
 pydot-ng = "*"
 
