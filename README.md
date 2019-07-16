@@ -45,7 +45,7 @@ And, after training is complete, the output and model are stored in S3.
 
 ## Deployment
 
-Deploy model to TensorFlow Serving in SageMaker.
+Deploy model to TensorFlow Serving-based server in SageMaker.
 
 ``` sh
 python deploy_model.py <model_data>
@@ -56,7 +56,21 @@ For example, s3://bucket-name/training/job-name/output/model.tar.gz.
 
 Models to be deployed are available not only for models trained in sagemaker, but also for BYO models.
 
+## Endpoint Delete
+
+``` sh
+python delete_endpoint.py <endpoint_name>
+```
+
+## Inference
+
+``` sh
+python infer.py <endpoint_name>
+```
+
 ## TODO
 
 - [ ] Inference
+  - [ ] REST (API Gateway)
+  - [ ] Batch transform
 - [ ] Custom Image
